@@ -1,68 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubuntu 20.04.6 | Full Script</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Default CSS -->
     <style>
-        .box{
-            border: 2px solid gray;
-            width: 400px;
-            /* height: 100px; */
-            margin: 20px auto;
-            padding-bottom: 20px;
-            border-radius: 15px;
-        }
-        img{
+        img {
             width: 14px;
-            
             padding-top: 0px;
             margin-top: 0px;
         }
         p{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 18px;
-            text-align: center;
-            padding-bottom: 0px;
-            margin-bottom: 5px;
-        }
-        a{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 14px;
-            color: black;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            padding-top: 0px;
-            margin-top: 0px;
-        }
-        a:hover{
-            font-weight: bold;
-            color: blue;
-        }
-        span{
-            padding-top: 0px;
-            margin-top: 0px;
+            margin: auto !important;
         }
     </style>
 </head>
+
 <body>
 
     <div class="box">
         <p>Ubuntu 20.04.6 LTS (Focal Fossa)</p>
-        <a href="./script-files/script-for-settings.sh"><img src="./svg/download-svgrepo-com.svg" alt="Download">&nbsp;<span>Download</span></a>
+        <a href="./script-files/script-for-settings.sh"><img src="./svg/download-svgrepo-com.svg"
+                alt="Download">&nbsp;<span>Download</span></a>
         <p style="padding-top: 20px;">Ubuntu restart at 23:59 and 06:59</p>
-        <a href="./script-files/restart-times.sh"><img src="./svg/download-svgrepo-com.svg" alt="Download">&nbsp;<span>Download</span></a>
+        <a href="./script-files/restart-times.sh"><img src="./svg/download-svgrepo-com.svg"
+                alt="Download">&nbsp;<span>Download</span></a>
         <p style="padding-top: 20px;">Updates daily at 06:00</p>
-        <a href="./script-files/updates-time.sh"><img src="./svg/download-svgrepo-com.svg" alt="Download">&nbsp;<span>Download</span></a>
+        <a href="./script-files/updates-time.sh"><img src="./svg/download-svgrepo-com.svg"
+                alt="Download">&nbsp;<span>Download</span></a>
     </div>
-    
+
     <div class="box">
         <p>Ubuntu all Settings + Relay Settings</p>
-        <a href="./script-files/all-settings+relay-settings.sh"><img src="./svg/download-svgrepo-com.svg" alt="Download">&nbsp;<span>Download</span></a>
+        <a href="./script-files/all-settings+relay-settings.sh"><img src="./svg/download-svgrepo-com.svg"
+                alt="Download">&nbsp;<span>Download</span></a>
         <p style="padding-top: 20px;">Only Relay Settings</p>
-        <a href="./script-files/only-relay-settings.sh"><img src="./svg/download-svgrepo-com.svg" alt="Download">&nbsp;<span>Download</span></a>
+        <a href="./script-files/only-relay-settings.sh"><img src="./svg/download-svgrepo-com.svg"
+                alt="Download">&nbsp;<span>Download</span></a>
     </div>
-    
+
+    <!-- Button trigger modal -->
+    <section>
+        <div class="container">
+            <div class="row border">
+                <div class="col d-flex align-items-center">
+                    <p>Ubuntu 20.04.6 LTS (Focal Fossa)</p>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop1">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ubuntu 20.04.6 LTS (Focal Fossa)</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <a href="./script-files/script-for-settings.sh"><img src="./svg/download-svgrepo-com.svg"
+                            alt="Download">&nbsp;<span>Download</span></a>
+                </div>
+
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
