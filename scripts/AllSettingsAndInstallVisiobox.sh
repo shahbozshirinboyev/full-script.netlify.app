@@ -81,3 +81,5 @@ export file_path=$(realpath ~/.config/autostart/startup.sh)
 sed -i "s|^Exec=.*$|Exec=$file_path|" ~/.config/autostart/cityscreen-player.desktop
 #restart
 sleep 10 && sudo reboot
+
+
