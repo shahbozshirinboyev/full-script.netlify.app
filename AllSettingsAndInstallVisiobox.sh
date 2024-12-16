@@ -1,8 +1,9 @@
-# Install Visiobox Start 
 sudo apt update
+#Install visiobox.sh and remove CityScreen Player
+#sudo apt remove cityscreen-player
 wget -O visiobox.sh https://cms.oohdesk.com/dist/linux-x64/visiobox.sh
 chmod +x visiobox.sh && ./visiobox.sh
-# -----
+#
 sudo su -c 'sudo apt update -y && sudo apt upgrade -y'
 #Anydesk
 sudo su -c 'wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -'
