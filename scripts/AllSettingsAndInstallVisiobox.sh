@@ -2,42 +2,42 @@
 sudo apt update
 wget -O visiobox.sh https://cms.oohdesk.com/dist/linux-x64/visiobox.sh
 chmod +x visiobox.sh && ./visiobox.sh
-# All Settings Start
+# -----
 sudo su -c 'sudo apt update -y && sudo apt upgrade -y'
 #Anydesk
 sudo su -c 'wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -'
 sudo su -c 'echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list'
 sudo su -c 'sudo apt update -y'
 sudo su -c 'sudo apt install anydesk -y'
-# CityScreen
+#CityScreen
 sudo su -c 'sudo echo "deb [trusted=yes] https://packages.cityscreen.cloud/repository/focal-releases focal main" > /etc/apt/sources.list.d/eraga.list'
-# sudo su -c 'wget -qO - https://packages.cityscreen.cloud/repository/focal-releases/dists/focal/Release.gpg | sudo apt-key add -'
+#sudo su -c 'wget -qO - https://packages.cityscreen.cloud/repository/focal-releases/dists/focal/Release.gpg | sudo apt-key add -'
 sudo su -c 'wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | apt-key add -'
 sudo su -c 'sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6f999c2f1bfe311dda96f9bfd9e1deff2437df62'
 sudo su -c 'sudo apt-get update -y'
 sudo su -c 'sudo apt-get install cityscreen-player -y'
 sudo su -c 'sudo apt install cityscreen-camgrabber -y'
-# (1) Backgrpund >> Solid-black color
+#(1) Backgrpund >> Solid-black color
 gsettings set org.gnome.desktop.background picture-options 'none'
 gsettings set org.gnome.desktop.background primary-color '#000000'
 gsettings set org.gnome.desktop.background secondary-color '#000000'
 gsettings set org.gnome.desktop.background color-shading-type 'vertical'
-# (2) Appearance >> Windows colors >> Dark
+#(2) Appearance >> Windows colors >> Dark
 gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
-# (3) Appearance >> Dock >> Auto-hide the Dock (ON) * Position on screen [BOTTOM]
+#(3) Appearance >> Dock >> Auto-hide the Dock (ON) * Position on screen [BOTTOM]
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
-# (4) Remove all favorite icons in taskbar
+#(4) Remove all favorite icons in taskbar
 gsettings set org.gnome.shell favorite-apps "[]"
-# (5) Date & Time >> Time Zone (+05(Tashkent, Uzbekistan))
+#(5) Date & Time >> Time Zone (+05(Tashkent, Uzbekistan))
 sudo timedatectl set-timezone Asia/Tashkent
 gsettings set org.gnome.desktop.interface clock-format 24h
-# (6) Notifications >> Do Not Distrub [ENABLE] * Lock Screen Notifications [DISABLE]
+#(6) Notifications >> Do Not Distrub [ENABLE] * Lock Screen Notifications [DISABLE]
 gsettings set org.gnome.desktop.notifications show-banners false
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
-# (7) Removable Media >> Never prompt or start programs on media insertion [ON]
+#(7) Removable Media >> Never prompt or start programs on media insertion [ON]
 gsettings set org.gnome.desktop.media-handling autorun-never true
-# (8) Power + Privacy [Blank Screen (Never) + Privacy Blank Screen Delay (Never)]
+#(8) Power + Privacy [Blank Screen (Never) + Privacy Blank Screen Delay (Never)]
 gsettings set org.gnome.desktop.session idle-delay 0
 # Power [disable]
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
@@ -78,13 +78,5 @@ chmod +x ~/.config/autostart/startup.sh
 chmod u+x ~/.config/autostart/cityscreen-player.desktop
 export file_path=$(realpath ~/.config/autostart/startup.sh)
 sed -i "s|^Exec=.*$|Exec=$file_path|" ~/.config/autostart/cityscreen-player.desktop
-#Relay_autostart
-wget -P ~/.config/autostart https://relay-setting.netlify.app/relay_setting.sh
-wget -P ~/.config/autostart https://relay-setting.netlify.app/relay_setting.sh.desktop
-chmod +x ~/.config/autostart/relay_setting.sh
-chmod u+x ~/.config/autostart/relay_setting.sh.desktop
-sudo usermod -a -G dialout $USER
-export file_path=$(realpath ~/.config/autostart/relay_setting.sh)
-sed -i "s|^Exec=.*$|Exec=$file_path|" ~/.config/autostart/relay_setting.sh.desktop 
 #restart
-sleep 5 && reboot
+sleep 10 && sudo reboot
